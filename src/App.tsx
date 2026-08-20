@@ -1,32 +1,37 @@
 import './App.css'
 import Sidebar from './components/Sidebar'
+import StatCard from './components/StatCard'
+import TopBar from './components/TopBar'
+import AppointmentList from './components/AppointmentList'
 
 function App() {
   return (
     <div className="app">
       <Sidebar />
 
-      <main className="main-content">
-        <h1>Dashboard</h1>
-        <p>Welcome back 👋</p>
+        <main className="main-content">
+          <TopBar />
 
-        <div className="stats">
-          <div className="card">
-            <h3>Today's Appointments</h3>
-            <strong>12</strong>
+          <div className="stats">
+            <StatCard
+              title="Today's Appointments"
+              value="12"
+            />
+
+            <StatCard
+              title="Today's Revenue"
+              value="₹8,450"
+            />
+
+            <StatCard
+              title="Customers"
+              value="28"
+            />
           </div>
 
-          <div className="card">
-            <h3>Today's Revenue</h3>
-            <strong>₹8,450</strong>
-          </div>
+          <AppointmentList />
+        </main>
 
-          <div className="card">
-            <h3>Customers</h3>
-            <strong>28</strong>
-          </div>
-        </div>
-      </main>
     </div>
   )
 }
